@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/images.jpeg" type="image/jpeg">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo">SkyCast</div>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main-content">
+        <div id="weather-container">
+            <div id="search">
+                <input type="text" id="city" placeholder="Enter City">
+                <button onclick="getWeather();">
+                    <img src="images/image.png"></button>
+            </div>
+            <div id="local-time"></div>
+            <img id="weather-icon">
+            <div id="temp-div"></div>
+            <div id="weather-info"></div>
+            <h2>HOURLY FORECAST</h2>
+            <hr>
+            <div id="hourly-forecast"></div>
+            <h2>DAILY FORECAST</h2>
+            <hr>
+            <div id="five-day-forecast">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2024 SkyCasts. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

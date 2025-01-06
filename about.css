@@ -1,0 +1,304 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-weight: 100;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    color: white;
+}
+
+body {
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-size: 16px;
+}
+
+header {
+    background: transparent;
+    padding: 20px;
+    color: white;
+    backdrop-filter: blur(40px);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#logo {
+    font-size: 1.9em;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    margin: 50px auto;
+    margin-top: 250px;
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+p {
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.5);
+    color: white;
+}
+
+footer p {
+    font-size: 1.1em;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .container {
+        width: 70%;
+        margin-top: 200px;
+    }
+
+    #logo {
+        font-size: 1.7em;
+    }
+
+    nav ul li a {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #logo {
+        font-size: 1.5em;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
+
+    .container {
+        width: 90%;
+        margin-top: 150px;
+        padding: 15px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    #weather-container {
+        max-width: 100%;
+        margin: 20px;
+        padding: 15px;
+    }
+
+    #temp-div, #weather-info, #local-time {
+        font-size: 1.5em;
+    }
+
+    #hourly-forecast, #five-day-forecast {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #logo {
+        font-size: 1.5em;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
+
+    .container {
+        width: 95%;
+        margin-top: 100px;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+
+    #weather-icon {
+        width: 150px;
+    }
+
+    #search img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #logo {
+        font-size: 1.5em;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
+
+    .container {
+        width: 95%;
+        margin-top: 100px;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #search input {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    #search button {
+        margin-left: 5px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+
+    #weather-icon {
+        width: 150px;
+    }
+
+    #search img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #logo {
+        font-size: 1.5em;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
+
+    .container {
+        width: 100%;
+        margin-top: 50px;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: bold;
+    }
+}

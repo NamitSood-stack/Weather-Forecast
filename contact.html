@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SkyCast</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="images/images.jpeg" type="image/jpeg">
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="logo">SkyCast</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contact Us Section -->
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Whether you have a question, feedback, or just want to say hello, feel free to reach out!</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+            <h2>Get In Touch</h2>
+            <form id="contactForm" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="contact-info-container">
+            <h2>Our Location</h2>
+            <p>If you're in the area, feel free to drop by our office or reach out via the methods below.</p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <h3>Office Address</h3>
+                    <p>SkyCast,Chitkara University, Rajpura, Punjab, India</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p><a href="mailto:contact@cloudlens.com">contact@skycast.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <p><a href="tel:+916239187832">+91 9999999999</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Map Embed -->
+        <div class="map-container">
+            <h2>Find Us Here</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27502.297635040984!2d76.66994564999999!3d30.49877215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc32344a6e2d7%3A0x81b346dee91799ca!2sChitkara%20University!5e0!3m2!1sen!2sin!4v1729256907333!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 SkyCasts. All rights reserved.</p>
+    </footer>
+</body>
+</html>
