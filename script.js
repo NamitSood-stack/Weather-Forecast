@@ -37,7 +37,7 @@ function getWeatherByCoordinates(lat, lon) {
       })
       .catch(error => {
         console.error("Error details:", error);
-        alert(error.message || "Could not retrieve weather data. Please try again.");
+        alert("Could not retrieve weather data. Please try again.");
       });
   }
 
