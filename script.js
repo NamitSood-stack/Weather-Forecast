@@ -19,22 +19,27 @@ const iconMap = {
 
 // Function to get weather by coordinates
 function getWeatherByCoordinates(lat, lon) {
-  fetch(`/api/weather?endpoint=weather&lat=${lat}&lon=${lon}`)
-    .then(response => response.json())
-    .then(data => {
-      if (data.cod === 200) {
-        displayCurrentWeather(data);
-        getHourlyForecast(lat, lon);
-        getFiveDayForecast(lat, lon);
-      } else {
-        throw new Error(data.error || 'Failed to fetch weather data');
-      }
-    })
-    .catch(error => {
-      console.error("Error fetching weather data:", error);
-      alert("Could not retrieve weather data. Please try again.");
-    });
-}
+    fetch(`/api/weather?endpoint=weather&lat=${lat}&lon=${lon}`)
+      .then(response => {
+        if (!response.ok) {
+          return response.json().then(err => Promise.reject(err));
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (data.cod === 200) {
+          displayCurrentWeather(data);
+          getHourlyForecast(lat, lon);
+          getFiveDayForecast(lat, lon);
+        } else {
+          throw new Error(data.message || 'Failed to fetch weather data');
+        }
+      })
+      .catch(error => {
+        console.error("Error details:", error);
+        alert(error.message || "Could not retrieve weather data. Please try again.");
+      });
+  }
 
 // Function to get weather for a specific city entered by the user
 function getWeather() {

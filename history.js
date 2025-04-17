@@ -1,34 +1,35 @@
-// Function to load and display search history
-function loadHistory() {
-    const historyTab = document.getElementById("history-tab");
-    const searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
-
-    if (searchHistory.length === 0) {
-        historyTab.innerHTML = "<p>No history available.</p>";
-        return;
+export default async function handler(req, res) {
+    // Add CORS headers
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  
+    const { endpoint, city, lat, lon } = req.query;
+    const apiKey = process.env.WEATHER_API_KEY;
+  
+    if (!apiKey) {
+      console.error('API key missing:', process.env);
+      return res.status(500).json({ error: 'API key configuration error' });
     }
-
-    searchHistory.forEach(item => {
-        const historyItem = document.createElement("div");
-        historyItem.classList.add("history-item");
-
-        historyItem.innerHTML = `
-            <h4>${item.city}</h4>
-            <p>Temperature: ${item.temperature}°C</p>
-            <p>Description: ${item.description}</p>
-            <p>Date: ${item.date}</p>
-            <img src="http://openweathermap.org/img/wn/${item.icon}@2x.png" alt="Weather Icon">
-        `;
-
-        historyTab.appendChild(historyItem);
-    });
-}
-
-// Function to clear the search history
-function clearHistory() {
-    localStorage.removeItem("searchHistory");
-    document.getElementById("history-tab").innerHTML = "<p>History cleared.</p>";
-}
-
-// Load history on page load
-window.onload = loadHistory;
+  
+    // ... rest of your existing code ...
+  
+    try {
+      console.log('Fetching from URL:', url); // Debug log
+      const response = await axios.get(url);
+      console.log('API Response:', response.status); // Debug log
+      
+      return res.status(200).json(response.data);
+    } catch (error) {
+      console.error('Detailed error:', {
+        message: error.message,
+        response: error.response?.data,
+        status: error.response?.status
+      });
+      
+      return res.status(error.response?.status || 500).json({
+        error: 'Weather API error',
+        message: error.response?.data?.message || error.message
+      });
+    }
+  }
