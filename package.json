@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "axios": "^1.8.4"
+  },
+  "name": "weather-forecast",
+  "version": "1.0.0",
+  "description": "🌤️ SkyCast 🌦️",
+  "main": "history.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NamitSood-stack/Weather-Forecast.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NamitSood-stack/Weather-Forecast/issues"
+  },
+  "homepage": "https://github.com/NamitSood-stack/Weather-Forecast#readme"
+}
